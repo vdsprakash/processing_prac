@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2019-08-10T17:14:08.045544964Z",
-  "chain_id": "vt",
+  "genesis_time": "2019-08-11T09:27:13.040965429Z",
+  "chain_id": "prodnet",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -18,43 +18,8 @@
   },
   "app_hash": "",
   "app_state": {
-    "slashing": {
-      "params": {
-        "max_evidence_age": "120000000000",
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": {},
-      "missed_blocks": {}
-    },
-    "gov": {
-      "starting_proposal_id": "1",
-      "deposits": null,
-      "votes": null,
-      "proposals": null,
-      "deposit_params": {
-        "min_deposit": [
-          {
-            "denom": "stake",
-            "amount": "10000000"
-          }
-        ],
-        "max_deposit_period": "172800000000000"
-      },
-      "voting_params": {
-        "voting_period": "172800000000000"
-      },
-      "tally_params": {
-        "quorum": "0.334000000000000000",
-        "threshold": "0.500000000000000000",
-        "veto": "0.334000000000000000"
-      }
-    },
-    "kvstore": {
-      "data_records": []
+    "bank": {
+      "send_enabled": true
     },
     "genutil": {
       "gentxs": [
@@ -66,7 +31,7 @@
                 "type": "cosmos-sdk/MsgCreateValidator",
                 "value": {
                   "description": {
-                    "moniker": "node1",
+                    "moniker": "nodeone",
                     "identity": "",
                     "website": "",
                     "details": ""
@@ -77,9 +42,9 @@
                     "max_change_rate": "0.010000000000000000"
                   },
                   "min_self_delegation": "1",
-                  "delegator_address": "zebi1mh43zs75krz8rz6dhlz3ja5c7pvxunhuqpal9n",
-                  "validator_address": "zebivaloper1mh43zs75krz8rz6dhlz3ja5c7pvxunhujlc94k",
-                  "pubkey": "zebivalconspub1zcjduepq7hghxf4apax4skqancm8ewgaqhr4duk0gqetjfrkthtm3484e0gqdgfsds",
+                  "delegator_address": "zebi15u7t6e6u4t6yxwtcsuthht0fu4trl05cduu69n",
+                  "validator_address": "zebivaloper15u7t6e6u4t6yxwtcsuthht0fu4trl05clzeq4k",
+                  "pubkey": "zebivalconspub1zcjduepqyz846zx5c4ljsdz6e3kf9fxjj0m28r9u5hslwkhncyhr0dd8q4vqw0t20f",
                   "value": {
                     "denom": "stake",
                     "amount": "100000000"
@@ -95,38 +60,35 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "AgDrXc713dzt4e24X9mSmFc3WdmcWCwa3m7Vf24Dg1ZP"
+                  "value": "A6kGJeDCYZSFMyXDK/Jm0yybPtduDw8QLHH4Sa4kiURB"
                 },
-                "signature": "SThCTqeZ5rNGpRzL8IjyqAkm0+MfYWqylLSFsBjz43t+WZ6WE9jDNjL/InV8I9aZdqnLymPvf8AA3SB+jTWRyA=="
+                "signature": "vFNG/pCKogBYoEu7D39JciSZ7l5CCuRQWwRO8VUrweoNmBbolYh3uHc2zhmQuzhnvbTZyFwJceU+VWE6yfWjng=="
               }
             ],
-            "memo": "b678249579e40f058b4503a2fa58bb052d37f79c@172.17.0.3:26656"
+            "memo": "7ee169cf3cdaf0685d15c75feff69930e45046d1@172.17.0.2:26656"
           }
         }
       ]
     },
-    "accounts": [
-      {
-        "address": "zebi1mh43zs75krz8rz6dhlz3ja5c7pvxunhuqpal9n",
-        "coins": [
-          {
-            "denom": "stake",
-            "amount": "100000000000"
-          },
-          {
-            "denom": "zebitoken",
-            "amount": "1000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0"
-      }
-    ],
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "0",
+        "bonded_tokens": "0"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "stake"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
+    },
     "distr": {
       "fee_pool": {
         "community_pool": []
@@ -158,7 +120,6 @@
         "blocks_per_year": "6311520"
       }
     },
-    "params": null,
     "auth": {
       "collected_fees": [],
       "params": {
@@ -169,27 +130,62 @@
         "sig_verify_cost_secp256k1": "1000"
       }
     },
-    "staking": {
-      "pool": {
-        "not_bonded_tokens": "0",
-        "bonded_tokens": "0"
-      },
+    "params": null,
+    "slashing": {
       "params": {
-        "unbonding_time": "259200000000000",
-        "max_validators": 100,
-        "max_entries": 7,
-        "bond_denom": "stake"
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
       },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegations": null,
-      "unbonding_delegations": null,
-      "redelegations": null,
-      "exported": false
+      "signing_infos": {},
+      "missed_blocks": {}
     },
-    "bank": {
-      "send_enabled": true
+    "accounts": [
+      {
+        "address": "zebi15u7t6e6u4t6yxwtcsuthht0fu4trl05cduu69n",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "1000000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "kvstore": {
+      "data_records": []
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": null,
+      "votes": null,
+      "proposals": null,
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "stake",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "172800000000000"
+      },
+      "voting_params": {
+        "voting_period": "172800000000000"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
     }
   }
 }
