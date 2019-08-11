@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2019-08-11T09:27:13.040965429Z",
+  "genesis_time": "2019-08-11T12:07:15.176428967Z",
   "chain_id": "prodnet",
   "consensus_params": {
     "block": {
@@ -18,8 +18,24 @@
   },
   "app_hash": "",
   "app_state": {
-    "bank": {
-      "send_enabled": true
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "0",
+        "bonded_tokens": "0"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "stake"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
     },
     "genutil": {
       "gentxs": [
@@ -42,9 +58,9 @@
                     "max_change_rate": "0.010000000000000000"
                   },
                   "min_self_delegation": "1",
-                  "delegator_address": "zebi15u7t6e6u4t6yxwtcsuthht0fu4trl05cduu69n",
-                  "validator_address": "zebivaloper15u7t6e6u4t6yxwtcsuthht0fu4trl05clzeq4k",
-                  "pubkey": "zebivalconspub1zcjduepqyz846zx5c4ljsdz6e3kf9fxjj0m28r9u5hslwkhncyhr0dd8q4vqw0t20f",
+                  "delegator_address": "zebi1hfea7spe40mj7tqxjmca4xyautwpxh2gf7asas",
+                  "validator_address": "zebivaloper1hfea7spe40mj7tqxjmca4xyautwpxh2gmqc2d4",
+                  "pubkey": "zebivalconspub1zcjduepq74g39n9qncy7rdqvudz6ufatht2ukcl8yeastr2jhpp36ndzx8mqcd60nc",
                   "value": {
                     "denom": "stake",
                     "amount": "100000000"
@@ -60,110 +76,17 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "A6kGJeDCYZSFMyXDK/Jm0yybPtduDw8QLHH4Sa4kiURB"
+                  "value": "A1ODCTbuYUGFmNUsyWPrI6h/HKgMa1n57UNDSRw6dv6u"
                 },
-                "signature": "vFNG/pCKogBYoEu7D39JciSZ7l5CCuRQWwRO8VUrweoNmBbolYh3uHc2zhmQuzhnvbTZyFwJceU+VWE6yfWjng=="
+                "signature": "RRMj0Bgs1Kex6lTeot2Re/gcfjJbRqB1tSIVae/b/ORu893JGiVeTAnjq9gQHvqJmpVsajkANiFidHugUxTRKQ=="
               }
             ],
-            "memo": "7ee169cf3cdaf0685d15c75feff69930e45046d1@172.17.0.2:26656"
+            "memo": "ca51e5d389ad8312cd0a459a5a46528389222f3a@172.17.0.2:26656"
           }
         }
       ]
     },
-    "staking": {
-      "pool": {
-        "not_bonded_tokens": "0",
-        "bonded_tokens": "0"
-      },
-      "params": {
-        "unbonding_time": "259200000000000",
-        "max_validators": 100,
-        "max_entries": 7,
-        "bond_denom": "stake"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegations": null,
-      "unbonding_delegations": null,
-      "redelegations": null,
-      "exported": false
-    },
-    "distr": {
-      "fee_pool": {
-        "community_pool": []
-      },
-      "community_tax": "0.020000000000000000",
-      "base_proposer_reward": "0.010000000000000000",
-      "bonus_proposer_reward": "0.040000000000000000",
-      "withdraw_addr_enabled": true,
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
-    },
-    "mint": {
-      "minter": {
-        "inflation": "0.130000000000000000",
-        "annual_provisions": "0.000000000000000000"
-      },
-      "params": {
-        "mint_denom": "stake",
-        "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
-        "goal_bonded": "0.670000000000000000",
-        "blocks_per_year": "6311520"
-      }
-    },
-    "auth": {
-      "collected_fees": [],
-      "params": {
-        "max_memo_characters": "256",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
-      }
-    },
     "params": null,
-    "slashing": {
-      "params": {
-        "max_evidence_age": "120000000000",
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": {},
-      "missed_blocks": {}
-    },
-    "accounts": [
-      {
-        "address": "zebi15u7t6e6u4t6yxwtcsuthht0fu4trl05cduu69n",
-        "coins": [
-          {
-            "denom": "stake",
-            "amount": "1000000000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0"
-      }
-    ],
-    "kvstore": {
-      "data_records": []
-    },
     "gov": {
       "starting_proposal_id": "1",
       "deposits": null,
@@ -186,6 +109,83 @@
         "threshold": "0.500000000000000000",
         "veto": "0.334000000000000000"
       }
+    },
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "stake",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "distr": {
+      "fee_pool": {
+        "community_pool": []
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
+    },
+    "auth": {
+      "collected_fees": [],
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {},
+      "missed_blocks": {}
+    },
+    "kvstore": {
+      "data_records": []
+    },
+    "accounts": [
+      {
+        "address": "zebi1hfea7spe40mj7tqxjmca4xyautwpxh2gf7asas",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "1000000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "bank": {
+      "send_enabled": true
     }
   }
 }
