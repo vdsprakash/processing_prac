@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2019-08-12T03:50:15.657299888Z",
+  "genesis_time": "2019-08-12T07:59:32.863992518Z",
   "chain_id": "prodnet",
   "consensus_params": {
     "block": {
@@ -18,6 +18,9 @@
   },
   "app_hash": "",
   "app_state": {
+    "bank": {
+      "send_enabled": true
+    },
     "mint": {
       "minter": {
         "inflation": "0.130000000000000000",
@@ -32,11 +35,36 @@
         "blocks_per_year": "6311520"
       }
     },
+    "auth": {
+      "collected_fees": [],
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
     "kvstore": {
       "data_records": []
     },
-    "bank": {
-      "send_enabled": true
+    "params": null,
+    "distr": {
+      "fee_pool": {
+        "community_pool": []
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
     },
     "staking": {
       "pool": {
@@ -57,6 +85,24 @@
       "redelegations": null,
       "exported": false
     },
+    "accounts": [
+      {
+        "address": "zebi1d2p8perym3rea66czr72d0cpjwat857la2h547",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "1000000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
     "genutil": {
       "gentxs": [
         {
@@ -73,17 +119,17 @@
                     "details": ""
                   },
                   "commission": {
-                    "rate": "0.100000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "max_change_rate": "0.010000000000000000"
+                    "rate": "0.001000000000000000",
+                    "max_rate": "0.100000000000000000",
+                    "max_change_rate": "0.050000000000000000"
                   },
-                  "min_self_delegation": "1",
-                  "delegator_address": "zebi15yxe6addsptqyfjpz2xuetwufw99vazgza9w0v",
-                  "validator_address": "zebivaloper15yxe6addsptqyfjpz2xuetwufw99vazgsrq5lf",
-                  "pubkey": "zebivalconspub1zcjduepqvqaqqawr2f25jtr52yhpu5vavkgydwp227dkqm2s6jm703guz4xsyp5a0x",
+                  "min_self_delegation": "100000000000",
+                  "delegator_address": "zebi1d2p8perym3rea66czr72d0cpjwat857la2h547",
+                  "validator_address": "zebivaloper1d2p8perym3rea66czr72d0cpjwat857l05jw9m",
+                  "pubkey": "zebivalconspub1zcjduepqee3vvqar8le0huckdy0c664aplfwlg2lgujyrq3t2s03pngajasqp4r6c2",
                   "value": {
                     "denom": "stake",
-                    "amount": "100000000"
+                    "amount": "100000000000000"
                   }
                 }
               }
@@ -96,34 +142,16 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "Agn9VaeBTOLTxkf1j3ayH3o+9gvjmqgVMtA9nC1XpeX1"
+                  "value": "AjTcZjL6HGRouxm6ivMndo+2iPmOcPtbaGPSeIJjnKWW"
                 },
-                "signature": "u41FxHlfXnpaLs41S4MemDAwspgOpQl5vDj5olIG2tBBuKRsPBbmHrextkl4vMjYGuMrCJLOeKnAD0ime5WnbQ=="
+                "signature": "D8r3qMikJidLaj7rLvcBKbH/AkRhgSt/4G2OjzMQFmV11lYRvGIE2M/GgXiG/RWpO+J2a1omLvdzh2T9Z3YbUw=="
               }
             ],
-            "memo": "bba71912ef307e276ab0f80481ca12aea90c1301@172.17.0.2:26656"
+            "memo": "1f41e033afa8dbb63224ecd9b3b640a4c4006366@172.17.0.2:26656"
           }
         }
       ]
     },
-    "accounts": [
-      {
-        "address": "zebi15yxe6addsptqyfjpz2xuetwufw99vazgza9w0v",
-        "coins": [
-          {
-            "denom": "stake",
-            "amount": "1000000000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0"
-      }
-    ],
     "slashing": {
       "params": {
         "max_evidence_age": "120000000000",
@@ -135,24 +163,6 @@
       },
       "signing_infos": {},
       "missed_blocks": {}
-    },
-    "params": null,
-    "distr": {
-      "fee_pool": {
-        "community_pool": []
-      },
-      "community_tax": "0.020000000000000000",
-      "base_proposer_reward": "0.010000000000000000",
-      "bonus_proposer_reward": "0.040000000000000000",
-      "withdraw_addr_enabled": true,
-      "delegator_withdraw_infos": [],
-      "previous_proposer": "",
-      "outstanding_rewards": [],
-      "validator_accumulated_commissions": [],
-      "validator_historical_rewards": [],
-      "validator_current_rewards": [],
-      "delegator_starting_infos": [],
-      "validator_slash_events": []
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -175,16 +185,6 @@
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto": "0.334000000000000000"
-      }
-    },
-    "auth": {
-      "collected_fees": [],
-      "params": {
-        "max_memo_characters": "256",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
       }
     }
   }
