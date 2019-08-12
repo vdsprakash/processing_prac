@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2019-08-11T12:19:01.249193181Z",
+  "genesis_time": "2019-08-12T03:50:15.657299888Z",
   "chain_id": "prodnet",
   "consensus_params": {
     "block": {
@@ -18,6 +18,125 @@
   },
   "app_hash": "",
   "app_state": {
+    "mint": {
+      "minter": {
+        "inflation": "0.130000000000000000",
+        "annual_provisions": "0.000000000000000000"
+      },
+      "params": {
+        "mint_denom": "stake",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "kvstore": {
+      "data_records": []
+    },
+    "bank": {
+      "send_enabled": true
+    },
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "0",
+        "bonded_tokens": "0"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "stake"
+      },
+      "last_total_power": "0",
+      "last_validator_powers": null,
+      "validators": null,
+      "delegations": null,
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": false
+    },
+    "genutil": {
+      "gentxs": [
+        {
+          "type": "auth/StdTx",
+          "value": {
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "description": {
+                    "moniker": "nodeone",
+                    "identity": "",
+                    "website": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "zebi15yxe6addsptqyfjpz2xuetwufw99vazgza9w0v",
+                  "validator_address": "zebivaloper15yxe6addsptqyfjpz2xuetwufw99vazgsrq5lf",
+                  "pubkey": "zebivalconspub1zcjduepqvqaqqawr2f25jtr52yhpu5vavkgydwp227dkqm2s6jm703guz4xsyp5a0x",
+                  "value": {
+                    "denom": "stake",
+                    "amount": "100000000"
+                  }
+                }
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "Agn9VaeBTOLTxkf1j3ayH3o+9gvjmqgVMtA9nC1XpeX1"
+                },
+                "signature": "u41FxHlfXnpaLs41S4MemDAwspgOpQl5vDj5olIG2tBBuKRsPBbmHrextkl4vMjYGuMrCJLOeKnAD0ime5WnbQ=="
+              }
+            ],
+            "memo": "bba71912ef307e276ab0f80481ca12aea90c1301@172.17.0.2:26656"
+          }
+        }
+      ]
+    },
+    "accounts": [
+      {
+        "address": "zebi15yxe6addsptqyfjpz2xuetwufw99vazgza9w0v",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "1000000000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {},
+      "missed_blocks": {}
+    },
+    "params": null,
     "distr": {
       "fee_pool": {
         "community_pool": []
@@ -34,35 +153,6 @@
       "validator_current_rewards": [],
       "delegator_starting_infos": [],
       "validator_slash_events": []
-    },
-    "kvstore": {
-      "data_records": []
-    },
-    "mint": {
-      "minter": {
-        "inflation": "0.130000000000000000",
-        "annual_provisions": "0.000000000000000000"
-      },
-      "params": {
-        "mint_denom": "stake",
-        "inflation_rate_change": "0.130000000000000000",
-        "inflation_max": "0.200000000000000000",
-        "inflation_min": "0.070000000000000000",
-        "goal_bonded": "0.670000000000000000",
-        "blocks_per_year": "6311520"
-      }
-    },
-    "slashing": {
-      "params": {
-        "max_evidence_age": "120000000000",
-        "signed_blocks_window": "100",
-        "min_signed_per_window": "0.500000000000000000",
-        "downtime_jail_duration": "600000000000",
-        "slash_fraction_double_sign": "0.050000000000000000",
-        "slash_fraction_downtime": "0.010000000000000000"
-      },
-      "signing_infos": {},
-      "missed_blocks": {}
     },
     "gov": {
       "starting_proposal_id": "1",
@@ -87,47 +177,6 @@
         "veto": "0.334000000000000000"
       }
     },
-    "params": null,
-    "accounts": [
-      {
-        "address": "zebi12qs6w89q4n0t8qfkk3l97fu3hvv3d4hahfptp3",
-        "coins": [
-          {
-            "denom": "stake",
-            "amount": "1000000000000000"
-          }
-        ],
-        "sequence_number": "0",
-        "account_number": "0",
-        "original_vesting": [],
-        "delegated_free": [],
-        "delegated_vesting": [],
-        "start_time": "0",
-        "end_time": "0"
-      }
-    ],
-    "staking": {
-      "pool": {
-        "not_bonded_tokens": "0",
-        "bonded_tokens": "0"
-      },
-      "params": {
-        "unbonding_time": "259200000000000",
-        "max_validators": 100,
-        "max_entries": 7,
-        "bond_denom": "stake"
-      },
-      "last_total_power": "0",
-      "last_validator_powers": null,
-      "validators": null,
-      "delegations": null,
-      "unbonding_delegations": null,
-      "redelegations": null,
-      "exported": false
-    },
-    "bank": {
-      "send_enabled": true
-    },
     "auth": {
       "collected_fees": [],
       "params": {
@@ -137,55 +186,6 @@
         "sig_verify_cost_ed25519": "590",
         "sig_verify_cost_secp256k1": "1000"
       }
-    },
-    "genutil": {
-      "gentxs": [
-        {
-          "type": "auth/StdTx",
-          "value": {
-            "msg": [
-              {
-                "type": "cosmos-sdk/MsgCreateValidator",
-                "value": {
-                  "description": {
-                    "moniker": "nodeone",
-                    "identity": "",
-                    "website": "",
-                    "details": ""
-                  },
-                  "commission": {
-                    "rate": "0.100000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "max_change_rate": "0.010000000000000000"
-                  },
-                  "min_self_delegation": "1",
-                  "delegator_address": "zebi12qs6w89q4n0t8qfkk3l97fu3hvv3d4hahfptp3",
-                  "validator_address": "zebivaloper12qs6w89q4n0t8qfkk3l97fu3hvv3d4ha9hy335",
-                  "pubkey": "zebivalconspub1zcjduepqpqk27qplx05raq4wemn4jqslzpjzm4uw5kejuusvtx7grqga4w4qmljyrf",
-                  "value": {
-                    "denom": "stake",
-                    "amount": "100000000"
-                  }
-                }
-              }
-            ],
-            "fee": {
-              "amount": [],
-              "gas": "200000"
-            },
-            "signatures": [
-              {
-                "pub_key": {
-                  "type": "tendermint/PubKeySecp256k1",
-                  "value": "Aw9w8wVRA8vZeKaA9Mw+xE3Emi2rAofru4R0pgQw0Rwv"
-                },
-                "signature": "fQnVmTq8+8VDKVTluYXF8ltvnLG6e/dcEtuto1jqs98i83huTFOc6fc7dHpuh7UL7GFGDKv9dQ3VMSu61DcPMA=="
-              }
-            ],
-            "memo": "a3c5afbb6a6e3e8045b2506a2c7824a0e1151843@172.17.0.2:26656"
-          }
-        }
-      ]
     }
   }
 }
