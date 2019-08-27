@@ -1,0 +1,421 @@
+{
+  "genesis_time": "2019-08-17T12:27:47.873863442Z",
+  "chain_id": "prodnet",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age": "100000"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    }
+  },
+  "validators": [
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "D6K1XHSX2W3OwOA0VIm6KfVzMhxAJ6tlCjNv6kMWKMY="
+      },
+      "power": "80000000",
+      "name": "Quark"
+    },
+    {
+      "address": "",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "2UBMzwmzqlLU78471o4CocXXEpBYGpWhvJQJG6bP694="
+      },
+      "power": "100000000",
+      "name": "Tango"
+    }
+  ],
+  "app_hash": "",
+  "app_state": {
+    "mint": {
+      "minter": {
+        "inflation": "0.131537882112268702",
+        "annual_provisions": "65981064046358.729853165741422192"
+      },
+      "params": {
+        "mint_denom": "stake",
+        "inflation_rate_change": "0.130000000000000000",
+        "inflation_max": "0.200000000000000000",
+        "inflation_min": "0.070000000000000000",
+        "goal_bonded": "0.670000000000000000",
+        "blocks_per_year": "6311520"
+      }
+    },
+    "slashing": {
+      "params": {
+        "max_evidence_age": "120000000000",
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {
+        "zebivalcons1s6f06mkz4299tq5dcgzs2uyyp5s58yy8k9v4mg": {
+          "address": "zebivalcons1s6f06mkz4299tq5dcgzs2uyyp5s58yy8k9v4mg",
+          "start_height": "11033",
+          "index_offset": "144353",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "zebivalcons13ky0umwyvc4kpta3eqzt0s23lsvkrl6fesjpjx": {
+          "address": "zebivalcons13ky0umwyvc4kpta3eqzt0s23lsvkrl6fesjpjx",
+          "start_height": "0",
+          "index_offset": "155387",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        }
+      },
+      "missed_blocks": {
+        "zebivalcons1s6f06mkz4299tq5dcgzs2uyyp5s58yy8k9v4mg": [],
+        "zebivalcons13ky0umwyvc4kpta3eqzt0s23lsvkrl6fesjpjx": []
+      }
+    },
+    "genutil": null,
+    "bank": {
+      "send_enabled": true
+    },
+    "kvstore": {
+      "data_records": null
+    },
+    "distr": {
+      "fee_pool": {
+        "community_pool": [
+          {
+            "denom": "stake",
+            "amount": "32253276988.680001394007209978"
+          }
+        ]
+      },
+      "community_tax": "0.020000000000000000",
+      "base_proposer_reward": "0.010000000000000000",
+      "bonus_proposer_reward": "0.040000000000000000",
+      "withdraw_addr_enabled": true,
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "zebivalcons1s6f06mkz4299tq5dcgzs2uyyp5s58yy8k9v4mg",
+      "outstanding_rewards": [
+        {
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "outstanding_rewards": [
+            {
+              "denom": "stake",
+              "amount": "652866348031.063332713774565338"
+            }
+          ]
+        },
+        {
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "outstanding_rewards": [
+            {
+              "denom": "stake",
+              "amount": "927544224414.256665892218224684"
+            }
+          ]
+        }
+      ],
+      "validator_accumulated_commissions": [
+        {
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "accumulated": [
+            {
+              "denom": "stake",
+              "amount": "6528663480.310633327137745636"
+            }
+          ]
+        },
+        {
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "accumulated": [
+            {
+              "denom": "stake",
+              "amount": "9275442244.142566658922182268"
+            }
+          ]
+        }
+      ],
+      "validator_historical_rewards": [
+        {
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        },
+        {
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "period": "1",
+          "rewards": {
+            "cumulative_reward_ratio": null,
+            "reference_count": 2
+          }
+        }
+      ],
+      "validator_current_rewards": [
+        {
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "rewards": {
+            "rewards": [
+              {
+                "denom": "stake",
+                "amount": "646337684550.752699386636819702"
+              }
+            ],
+            "period": "2"
+          }
+        },
+        {
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "rewards": {
+            "rewards": [
+              {
+                "denom": "stake",
+                "amount": "918268782170.114099233296042416"
+              }
+            ],
+            "period": "2"
+          }
+        }
+      ],
+      "delegator_starting_infos": [
+        {
+          "delegator_address": "zebi1k3ectxg5k4zpw95penm7v9xrtd9ahsep0df7g9",
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "80000000000000.000000000000000000",
+            "height": "11033"
+          }
+        },
+        {
+          "delegator_address": "zebi1efmac09qr960tyc6ducxrtkvfy2fgh7jzh5z7y",
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "starting_info": {
+            "previous_period": "1",
+            "stake": "100000000000000.000000000000000000",
+            "height": "0"
+          }
+        }
+      ],
+      "validator_slash_events": []
+    },
+    "accounts": [
+      {
+        "address": "zebi1jggxdd35k3tqcg4vqxcm8xkg8tgxncg96ash3u",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "150"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "3",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "zebi1k3ectxg5k4zpw95penm7v9xrtd9ahsep0df7g9",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "499997878080"
+          }
+        ],
+        "sequence_number": "3",
+        "account_number": "1",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "zebi1efmac09qr960tyc6ducxrtkvfy2fgh7jzh5z7y",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "238999986747600"
+          }
+        ],
+        "sequence_number": "11",
+        "account_number": "0",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "zebi16edtmssv9vfkymps7znslqr0tdu408v6m62ald",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "80500000000000"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "2",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      },
+      {
+        "address": "zebi1a0nsakahnhhq0nrp7ezxttevacpfgsy35xrj92",
+        "coins": [
+          {
+            "denom": "stake",
+            "amount": "2300"
+          }
+        ],
+        "sequence_number": "0",
+        "account_number": "4",
+        "original_vesting": [],
+        "delegated_free": [],
+        "delegated_vesting": [],
+        "start_time": "0",
+        "end_time": "0"
+      }
+    ],
+    "auth": {
+      "collected_fees": [],
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      }
+    },
+    "gov": {
+      "starting_proposal_id": "1",
+      "deposits": null,
+      "votes": null,
+      "proposals": [],
+      "deposit_params": {
+        "min_deposit": [
+          {
+            "denom": "stake",
+            "amount": "10000000"
+          }
+        ],
+        "max_deposit_period": "172800000000000"
+      },
+      "voting_params": {
+        "voting_period": "172800000000000"
+      },
+      "tally_params": {
+        "quorum": "0.334000000000000000",
+        "threshold": "0.500000000000000000",
+        "veto": "0.334000000000000000"
+      }
+    },
+    "staking": {
+      "pool": {
+        "not_bonded_tokens": "321612648477564",
+        "bonded_tokens": "180000000000000"
+      },
+      "params": {
+        "unbonding_time": "259200000000000",
+        "max_validators": 100,
+        "max_entries": 7,
+        "bond_denom": "stake"
+      },
+      "last_total_power": "180000000",
+      "last_validator_powers": [
+        {
+          "Address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "Power": "80000000"
+        },
+        {
+          "Address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "Power": "100000000"
+        }
+      ],
+      "validators": [
+        {
+          "operator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "consensus_pubkey": "zebivalconspub1zcjduepqp73t2hr5jlvkmnkquq69fzd6986hxvsugqn6keg2xdh75sck9rrqt9unxt",
+          "jailed": false,
+          "status": 2,
+          "tokens": "80000000000000",
+          "delegator_shares": "80000000000000.000000000000000000",
+          "description": {
+            "moniker": "Quark",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "CommissionRates": {
+              "rate": "0.010000000000000000",
+              "max_rate": "0.050000000000000000",
+              "max_change_rate": "0.005000000000000000"
+            },
+            "update_time": "2019-08-18T04:00:28.248719962Z"
+          },
+          "min_self_delegation": "100000000"
+        },
+        {
+          "operator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "consensus_pubkey": "zebivalconspub1zcjduepqm9qyencfkw499480ecaadrsz58zawy5stqdftgdujsy3hfk0a00qtk26sh",
+          "jailed": false,
+          "status": 2,
+          "tokens": "100000000000000",
+          "delegator_shares": "100000000000000.000000000000000000",
+          "description": {
+            "moniker": "Tango",
+            "identity": "",
+            "website": "",
+            "details": ""
+          },
+          "unbonding_height": "0",
+          "unbonding_time": "1970-01-01T00:00:00Z",
+          "commission": {
+            "CommissionRates": {
+              "rate": "0.010000000000000000",
+              "max_rate": "0.050000000000000000",
+              "max_change_rate": "0.005000000000000000"
+            },
+            "update_time": "2019-08-17T12:27:47.873863442Z"
+          },
+          "min_self_delegation": "100000000"
+        }
+      ],
+      "delegations": [
+        {
+          "delegator_address": "zebi1k3ectxg5k4zpw95penm7v9xrtd9ahsep0df7g9",
+          "validator_address": "zebivaloper1k3ectxg5k4zpw95penm7v9xrtd9ahsepanvycq",
+          "shares": "80000000000000.000000000000000000"
+        },
+        {
+          "delegator_address": "zebi1efmac09qr960tyc6ducxrtkvfy2fgh7jzh5z7y",
+          "validator_address": "zebivaloper1efmac09qr960tyc6ducxrtkvfy2fgh7jsf3cwp",
+          "shares": "100000000000000.000000000000000000"
+        }
+      ],
+      "unbonding_delegations": null,
+      "redelegations": null,
+      "exported": true
+    }
+  }
+}
